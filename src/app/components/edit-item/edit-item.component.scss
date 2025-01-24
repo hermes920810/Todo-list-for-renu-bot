@@ -23,3 +23,9 @@ form {
     width: 100%;
   }
 }
+
+button.save-btn {
+  margin-top: $spacing-medium;
+  color: #fff;
+  font-size: $font-size-medium;
+}

@@ -1,3 +1,5 @@
+@import '../../../styles/custom-design';
+
 .table-row {
     cursor: pointer;
 }
@@ -9,4 +11,10 @@
 .spacer {
     display: flex;
     justify-content: space-between;
+}
+
+button.add-btn {
+  margin-top: $spacing-medium;
+  color: #fff;
+  font-size: $font-size-medium;
 }
