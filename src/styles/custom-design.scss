@@ -1,3 +1,40 @@
+@use '@angular/material' as mat;
+// Define a custom primary palette
+$my-custom-primary: mat.define-palette(
+  (
+    50: #e0f7f7,
+    100: #b3ebeb,
+    200: #80dfdf,
+    300: #4dd3d3,
+    400: #26c9c9,
+    500: #19c7c7, // Custom primary color
+    600: #17b3b3,
+    700: #149e9e,
+    800: #118989,
+    900: #0c6b6b,
+    A100: #a5ffff,
+    A200: #72ffff,
+    A400: #3fffff,
+    A700: #26ffff,
+    contrast: (
+      50: black,
+      100: black,
+      200: black,
+      300: black,
+      400: black,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+      A100: black,
+      A200: black,
+      A400: black,
+      A700: black,
+    ),
+  )
+);
+
 // Colors
 $primary-color: #3f51b5;
 $secondary-color: #f50057;
