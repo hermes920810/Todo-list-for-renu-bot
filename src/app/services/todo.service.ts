@@ -12,6 +12,7 @@ export interface TodoItem {
 @Injectable({
   providedIn: 'root',
 })
+
 export class TodoService {
   private todos: TodoItem[] = JSON.parse(localStorage.getItem('todos') || '[]');
 

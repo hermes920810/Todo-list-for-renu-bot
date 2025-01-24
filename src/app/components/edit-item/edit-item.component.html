@@ -1,0 +1,25 @@
+<div>
+    <h2>Edit Todo</h2>
+    <form (ngSubmit)="onSubmit()" *ngIf="todo">
+        <mat-form-field appearance="fill">
+            <mat-label>Title</mat-label>
+            <input matInput [(ngModel)]="todo.title" name="title" required />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="todo.name" name="name" required />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput [(ngModel)]="todo.description" name="description"></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Due Date</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="todo.dateDue" name="dateDue" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Save</button>
+        <button mat-button color="warn" (click)="onCancel()">Cancel</button>
+    </form>
+</div>

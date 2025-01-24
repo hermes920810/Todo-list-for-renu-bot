@@ -8,6 +8,7 @@ import { ItemModalComponent } from './components/item-modal/item-modal.component
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
+
 export class AppComponent {
   constructor(
     private themeService: ThemeService, // Inject the ThemeService

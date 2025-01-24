@@ -23,14 +23,3 @@ form {
     width: 100%;
   }
 }
-
-button {
-  margin-top: $spacing-medium;
-  background-color: $secondary-color;
-  color: #fff;
-  font-size: $font-size-medium;
-
-  &:hover {
-    background-color: lighten($secondary-color, 10%);
-  }
-}

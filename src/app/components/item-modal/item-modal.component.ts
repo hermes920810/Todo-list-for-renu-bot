@@ -7,6 +7,7 @@ import { TodoItem } from '../../services/todo.service';
   templateUrl: './item-modal.component.html',
   styleUrls: ['./item-modal.component.scss'],
 })
+
 export class ItemModalComponent {
   constructor(
     public dialogRef: MatDialogRef<ItemModalComponent>,
