@@ -5,10 +5,8 @@
   <span class="header-title" routerLink="/">Todo App</span>
   <span class="spacer"></span>
   <!-- Theme Toggle Button -->
-  <button mat-button (click)="toggleTheme()" class="spaced-button">Toggle Theme</button>
-  <!-- <mat-slide-toggle (click)="toggleTheme()">Toggle Theme</mat-slide-toggle> -->
-  <!-- Add New Item Button -->
-  <button mat-raised-button color="accent" routerLink="/add">Add New Item</button>
+  <!-- <button mat-button (click)="toggleTheme()" class="spaced-button">Toggle Theme</button> -->
+  <mat-slide-toggle (click)="toggleTheme()">Toggle Theme</mat-slide-toggle>
 </mat-toolbar>
 
 <!-- Main Content -->
