@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="header-title" routerLink="/">Todo App</span>
+  <span class="spacer"></span>
+  <!-- Theme Toggle Button -->
+  <button mat-button (click)="toggleTheme()" class="spaced-button">Toggle Theme</button>
+  <!-- <mat-slide-toggle (click)="toggleTheme()">Toggle Theme</mat-slide-toggle> -->
+  <!-- Add New Item Button -->
+  <button mat-raised-button color="accent" routerLink="/add">Add New Item</button>
+</mat-toolbar>
+
+<!-- Main Content -->
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

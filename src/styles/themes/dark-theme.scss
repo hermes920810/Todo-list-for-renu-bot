@@ -1,0 +1,16 @@
+@import '../custom-design';
+
+// Dark Theme Tokens
+$primary-color: #90caf9;
+$secondary-color: #f48fb1;
+$background-color: #121212;
+$text-color: #fff;
+
+// Include these variables in Angular Material theme
+$dark-theme: mat-dark-theme((
+  color: (
+    primary: mat-palette($mat-purple),
+    accent: mat-palette($mat-green),
+    background: $background-color,
+  ),
+));

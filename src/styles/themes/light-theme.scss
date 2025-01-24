@@ -1,0 +1,16 @@
+@import '../custom-design';
+
+// Light Theme Tokens
+$primary-color: #3f51b5;
+$secondary-color: #f50057;
+$background-color: #ffffff;
+$text-color: #000;
+
+// Include these variables in Angular Material theme
+$light-theme: mat-light-theme((
+  color: (
+    primary: mat-palette($mat-purple),
+    accent: mat-palette($mat-green),
+    background: $background-color,
+  ),
+));

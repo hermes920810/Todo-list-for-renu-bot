@@ -1,0 +1,36 @@
+@import '../../../styles/design-tokens';
+
+:host {
+  display: block;
+  background-color: $background-color;
+  padding: $spacing-medium;
+  border-radius: $border-radius-medium;
+  box-shadow: $shadow-small;
+}
+
+h2 {
+  color: $primary-color;
+  font-family: $font-family-base;
+  font-size: $font-size-large;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-medium;
+
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+button {
+  margin-top: $spacing-medium;
+  background-color: $secondary-color;
+  color: #fff;
+  font-size: $font-size-medium;
+
+  &:hover {
+    background-color: lighten($secondary-color, 10%);
+  }
+}

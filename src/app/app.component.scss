@@ -1,0 +1,21 @@
+.spacer {
+    flex: 1 1 auto; /* Push elements to the right */
+}
+
+.header-title {
+    cursor: pointer;
+}
+
+.content {
+    padding: 16px; /* Add padding around the main content */
+}
+
+.spaced-button {
+    margin-right: 8px;
+}
+  
+mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the toolbar stays above other content */
+}
