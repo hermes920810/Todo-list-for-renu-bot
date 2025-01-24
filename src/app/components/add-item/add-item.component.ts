@@ -40,4 +40,8 @@ export class AddItemComponent {
       this.router.navigate(['/']);
     }
   }
+
+  onCancel(): void {
+    this.router.navigate(['/']);
+  }
 }
