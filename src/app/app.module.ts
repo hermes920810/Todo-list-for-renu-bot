@@ -27,6 +27,8 @@ import { ListViewComponent } from './components/list-view/list-view.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
 import { EditItemComponent } from './components/edit-item/edit-item.component';
 import { DeleteConfirmationModalComponent } from './components/delete-confirmation-modal/delete-confirmation-modal.component';
+import { TodoListByApiComponent } from './components/todo-list-by-api/todo-list-by-api.component';
+import { EditItemModalComponent } from './components/edit-item-modal/edit-item-modal.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { DeleteConfirmationModalComponent } from './components/delete-confirmati
     ItemModalComponent,
     EditItemComponent,
     DeleteConfirmationModalComponent,
+    TodoListByApiComponent,
+    EditItemModalComponent,
   ],
   imports: [
     BrowserModule,

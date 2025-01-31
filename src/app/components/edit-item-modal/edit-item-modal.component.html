@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Edit Todo</h2>
+<mat-dialog-content>
+  <mat-form-field class="full-width">
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="updatedTodo.title" />
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="updatedTodo.name" />
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Due Date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="updatedTodo.dateDue" name="dateDue" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <!-- <mat-label>Completed: </mat-label> -->
+  <mat-checkbox [(ngModel)]="updatedTodo.completed" labelPosition="before">Completed: </mat-checkbox>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button (click)="closeDialog()">Cancel</button>
+  <button mat-raised-button color="primary" class="update-btn" (click)="updateTodo()">Update</button>
+</mat-dialog-actions>

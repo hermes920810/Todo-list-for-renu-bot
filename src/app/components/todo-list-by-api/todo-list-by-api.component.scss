@@ -1,0 +1,20 @@
+@import '../../../styles/custom-design';
+
+.table-row {
+    cursor: pointer;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.spacer {
+    display: flex;
+    justify-content: space-between;
+}
+
+button.add-btn {
+    margin-top: $spacing-medium;
+    color: #fff;
+    font-size: $font-size-medium;
+}

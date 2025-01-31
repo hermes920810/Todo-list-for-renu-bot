@@ -1,0 +1,53 @@
+<div class="spacer">
+  <h2>Todo List by API</h2>
+</div>
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 mb-5">
+  <!-- Define columns -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> No </th>
+    <td mat-cell *matCellDef="let item; let i = index"> {{ i + 1 }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name"> Name </th>
+    <td mat-cell *matCellDef="let item"> {{ item.name }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by title"> Title </th>
+    <td mat-cell *matCellDef="let item"> {{ item.title }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="completed">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by completed"> Completed </th>
+    <td mat-cell *matCellDef="let item"> 
+      <mat-checkbox class="example-margin" [(ngModel)]="item.completed" [disabled]="isLoading" (click)="toggleCompleted($event, item.id)"></mat-checkbox>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="dateDue">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by dateDue"> Date Due </th>
+    <td mat-cell *matCellDef="let item"> {{ item?.dateDue | date: 'MM/dd/yyyy' }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="dateCreated">
+    <th mat-header-cell *matHeaderCellDef> Created At </th>
+    <td mat-cell *matCellDef="let item"> {{ item?.createdAt | date: 'MM/dd/yyyy' }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef class="w-20"> Actions </th>
+    <td mat-cell *matCellDef="let item" class="w-20">
+      <button mat-icon-button color="primary" [disabled]="isLoading" (click)="editItem($event, item)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <!-- Table header and row definitions -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="table-row" (click)="openEditDialog(row)"></tr>
+</table>
+
+<mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25]" showFirstLastButtons></mat-paginator>
+  
