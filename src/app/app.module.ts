@@ -9,6 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -42,6 +44,7 @@ import { DeleteConfirmationModalComponent } from './components/delete-confirmati
     MatIconModule,
     MatButtonModule,
     MatTableModule,
+    MatSortModule,
     MatPaginatorModule,
     MatSlideToggleModule,
     MatFormFieldModule,
@@ -49,6 +52,7 @@ import { DeleteConfirmationModalComponent } from './components/delete-confirmati
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModule,
+    MatCheckboxModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
